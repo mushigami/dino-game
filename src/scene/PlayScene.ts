@@ -6,8 +6,10 @@ class PlayScene extends Phaser.Scene{
     }
 
     create(){
-        alert("Play Scene loaded")
-    }
+        this.add
+            .tileSprite(0,this.game.config.height, 88, 26, 'ground')
+            .setOrigin(0,1);
+        }
 }
 
 export default PlayScene;
