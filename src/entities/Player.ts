@@ -23,8 +23,9 @@ export class Player extends Phaser.Physics.Arcade.Sprite{
 
     update(...args: any[]): void {
         const {space} = this.cursors;
-        const isSpaceJustDown = Phaser.Input.Keyboard.JustDown(space);
-        if(isSpaceJustDown){
+        const isSpaceJustDown = Phaser.Input.Keyboard.JustDown(space); // in order dino to fall down again
+        const onFloor = (this.body as Phaser.Physics.Arcade.Body).onFloor(); // casting arcade.body to staticbody (strange that it's static when created)
+        if(isSpaceJustDown && onFloor){
             this.setVelocityY(-1600);
         }        
     }
