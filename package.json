@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "eslint": "^8.47.0",
     "phaser": "^3.60.0"
   },
   "devDependencies": {
