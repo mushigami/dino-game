@@ -15,8 +15,6 @@ export class Player extends Phaser.Physics.Arcade.Sprite{
 
     init():void{
         this.cursors = this.scene.input.keyboard.createCursorKeys();
-        console.log(this.cursors)
-
         this
             .setOrigin(0,1)
             .setGravityY(5000)
